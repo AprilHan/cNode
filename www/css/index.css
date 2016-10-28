@@ -1,0 +1,34 @@
+.navbar {
+    width: 100%;
+    background-color: #444;
+    font-size: 13px;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.navbar-inner {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+}
+.navbar-inner .container {
+    width: 100%;
+    /*min-width: 960px;*/
+    margin: 0 auto;
+}
+.navbar-inner .container .nav li {
+    float: left
+}
+.navbar-inner .container .nav li > a {
+   color: #ccc;
+}
+.navbar-inner .container .nav li > a:hover {
+    background-color: transparent;
+    color: #fff;
+}
+.navbar .brand {
+    display: block;
+    width: 160px;
+    height: 34px;
+    padding: 3px 20px;
+    margin-left: -20px;
+}

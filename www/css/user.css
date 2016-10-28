@@ -1,0 +1,563 @@
+.content{position:relative;z-index:1;padding-top: 30px;}
+.nav-aside{position:relative;width:150px;margin-right:40px;padding:8px 0 38px;background-color:#29aae4;z-index:10;overflow:visible;}
+.nav-aside>li{height:38px;color:#fff;background:url(../images/style/line.png) bottom center no-repeat;font-size:14px;text-align:center;line-height:40px;z-index:10;}
+.nav-aside>li:last-child{position:absolute;left:8px;top:6px;width:148px;height:44px;background:url(../images/style/select_styles.png) center no-repeat;z-index:-1;}
+.nav-aside>li.active{color:#333;}
+.nav-aside>li>span{cursor:pointer;}
+.overview{width:904px;}
+.account.active {color: #ffba02;}
+input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+.block {
+    display: block;
+}
+/*自身账号管理*/
+.tab-content > li {
+    display: none;
+}
+.tab-content > li.active {
+    display: block;
+}
+.tab-content li div > .add {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px 0 26px;
+    line-height: 30px;
+    border: 1px solid #c0c0c0;
+    color: #2aaae4;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    /*background-color: #fff;*/
+}
+.tab-content li div > .add > .icon_add {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 12px;
+    height: 26px;
+    background: url("../images/style/add_01.png");
+}
+.tab-content li div > form > input:nth-child(1) {
+    outline: none;
+    border:1px solid #c0c0c0;
+    width: 242px;
+    height: 26px;
+    padding-left: 10px;
+    margin-right: 14px;
+}
+.tab-content li div > form > select[name='first'],
+.tab-content li div > form > select[name='second']
+{
+    margin-right: 14px;
+}
+.tab-content li div > form > input[type="button"] {
+    outline: none;
+    border: 0;
+    width: 102px;
+    height: 30px;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: #2caae5;
+    color: #fff;
+}
+
+.tab-content li div >  .plateform {
+    margin-top: 7px;
+}
+.tab-content li div >  .plateform > li {
+    width: 80px;
+    height: 72px;
+    background-image: url('../images/style/platform.png');
+    background-repeat: no-repeat;
+}
+.tab-content li div >  .plateform > li:nth-child(1) {
+    background-position: center -122px;
+}
+.tab-content li div >  .plateform > li:nth-child(1).active {
+    background-position: center -183px;
+    background-color: #475993;
+}
+.tab-content li div >  .plateform > li:nth-child(2) {
+    background-position: center 0;
+}
+.tab-content li div >  .plateform > li:nth-child(2).active {
+    background-position: center -61px;
+    background-color: #475993;
+}
+.tab-content li div > table {
+    margin-top: 10px;
+    border-right: 1px solid #8f8f8f;
+    border-bottom: 1px solid #8f8f8f;
+    background-color: #fff;
+    table-layout:fixed ;
+}
+
+.tab-content li div > table tr  td {
+    position: relative;
+    border-left: 1px solid #8f8f8f;
+    border-top: 1px solid #8f8f8f;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.tab-content li:nth-child(4) div > table tr + tr {
+    line-height: 20px;
+}
+.tab-content li div > table tr {
+    height: 40px;
+    line-height: 40px;
+}
+.tab-content li div > table tr  td .edit {
+    color: #2aaae4;
+    padding: 0 12px;
+    cursor: pointer;
+}
+.tab-content li div > table tr  td .del {
+    color: #f00909;
+    padding: 0 12px;
+    cursor: pointer;
+}
+.tab-content li div > table tr  td .status {
+    color: #2aaae4;
+    padding: 0 12px;
+}
+.tab-content li div > table tr  td > i {
+    position: absolute;
+    top: 12px;
+    width: 16px;
+    height: 17px;
+    background: url("../images/style/sort.png");
+}
+#Pagination {
+    padding-left: 190px;
+    margin-top: -10px;
+}
+/*添加账户 自身账号*/
+.modal {
+    position: fixed;
+    background-color: rgba(0,0,0,0.1);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+}
+.modal .selfModelContent {
+    width: 608px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(40,47,55,.7);
+    padding: 50px 30px 20px 30px;
+}
+.modal .selfModelContent form >ul > li {
+    margin-bottom: 30px;
+}
+.modal .selfModelContent li div:nth-child(1) {
+    margin-right: 40px;
+}
+.modal .selfModelContent li > div > span {
+    display: block;
+    width: 66px;
+    height: 30px;
+    text-align: right;
+    margin-right: 8px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #343434;
+}
+.modal .selfModelContent li:nth-child(1)  input {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 28px;
+    line-height: 30px;
+    padding-left: 10px;
+    width: 198px;
+    border: 1px solid #c1c1c1;
+}
+.modal .selfModelContent li div:nth-child(2) .dropdown{
+    width: 146px;
+}
+.modal .selfModelContent li:nth-child(3) > div:nth-child(2) > input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 146px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+}
+.modal .selfModelContent li > div > button {
+    padding: 0;
+    outline: none;
+    background-color: #fff;
+    width: 66px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #c1c1c1;
+    margin-right: 14px;
+    border-radius: 2px;
+}
+.modal .selfModelContent li > div > button.active {
+    border: 0;
+    background-color: #2caae5;
+    color: #fff;
+}
+/*竞品账号*/
+#comModel {
+    display: none;
+}
+/*话题管理 天剑话题*/
+.modal .topicModelContent {
+    width: 536px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(40,47,55,.7);
+    padding: 50px 30px 50px 42px;
+}
+.modal .topicModelContent li > span {
+    display: block;
+    width: 114px;
+    height: 30px;
+    text-align: right;
+    margin-right: 6px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #343434;
+}
+.modal .topicModelContent li > input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    font-size: 14px;
+    padding-left: 10px;
+    width: 416px;
+}
+.modal .topicModelContent li {
+    margin-bottom: 14px;
+}
+.modal .topicModelContent li button,
+.modal .userModelContent li button
+{
+    outline: none;
+    border: 1px solid #c1c1c1;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 14px;
+    border-radius: 2px;
+    padding: 0 17px;
+}
+.modal .topicModelContent li button.active,
+.modal .userModelContent li button.active{
+    border: 0;
+    background-color: #2caae5;
+    color: #fff;
+}
+/*用户管理 添加用户*/
+.modal .userModelContent {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 442px;
+    padding: 16px 56px 30px 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(40,47,55,.7);
+}
+.modal .userModelContent h2 {
+    height: 32px;
+    line-height: 32px;
+    border-left: 4px solid #ffb900;
+    font-size: 22px;
+    color: #333;
+    padding-left: 8px;
+    margin-bottom: 24px;
+}
+.modal .userModelContent >form > ul > li {
+    margin-bottom: 14px;
+}
+.modal .userModelContent >form > ul > li.group  .dropdown{
+    width: 210px;
+}
+.modal .userModelContent >form > ul > li.status .dropdown{
+    width: 92px;
+}
+.modal .userModelContent li > span {
+    display: block;
+    width: 98px;
+    margin-right: 8px;
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #333;
+}
+.modal .userModelContent li input   {
+    width: 210px;
+    height: 30px;
+    padding-left:10px;
+    line-height: 30px;
+    border: 1px  solid #bfbfbf;
+}
+/*添加用户组 modal*/
+#userGroupModel .userGroupModelContent {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 440px;
+    padding:  16px 56px 30px 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(40,47,55,.7);
+}
+#userGroupModel .userGroupModelContent  h2 {
+    padding-left: 8px;
+    border-left: 4px solid #ffba00;
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 24px;
+}
+#userGroupModel .userGroupModelContent form > ul > li {
+    margin-bottom: 14px;
+}
+#userGroupModel .userGroupModelContent form ul li > span.block   {
+    width: 98px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #333;
+    margin-right: 6px;
+}
+#userGroupModel .userGroupModelContent form ul li > input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 210px;
+    height: 30px;
+    padding-left:10px;
+    line-height: 30px;
+    border: 1px  solid #ccc;
+}
+#userGroupModel .userGroupModelContent form ul li > .dropdown {
+    width: 210px;
+}
+#userGroupModel .userGroupModelContent form ul li:last-child  .dropdown {
+    width: 92px;
+}
+ .modalFooter > button {
+    outline: none;
+    border: 1px solid #c0c0c0;
+    padding: 0 17px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 14px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 2px;
+}
+#userGroupModel .userGroupModelContent > .modalFooter > button.active {
+    border: 0;
+    background-color: #2caae5;
+    color: #fff;
+}
+/*话题管理 编辑*/
+#topicEdit .topicModelEdit {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 440px;
+    padding:  16px 56px 30px 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(40,47,55,.7);
+}
+#topicEdit .topicModelEdit > h2 {
+    padding-left: 8px;
+    border-left: 4px solid #ffba00;
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 24px;
+}
+#topicEdit .topicModelEdit span.block {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    font-size: 16px;
+    color: #333;
+    margin-right: 8px;
+}
+#topicEdit .topicModelEdit ul > li {
+    margin-bottom: 14px;
+}
+#topicEdit .topicModelEdit ul > li > input {
+
+    width: 210px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 12px;
+}
+#topicEdit .topicModelEdit > .modalFooter > button.active {
+    border: 0;
+    background-color: #2caae5;
+    color: #fff;
+}
+/*input number 类型去掉右侧按钮*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+/*input number 类型去掉右侧按钮*/
+/*用户组  编辑 modal*/
+.modal .groupTableEdit {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 870px;
+    padding: 16px 30px 30px 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(40,47,55,.7);
+}
+.modal .groupTableEdit > h2 {
+    padding-left: 8px;
+    height: 30px;
+    line-height: 30px;
+    border-left: 4px solid #ffbd00;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 24px;
+}
+.modal .groupTableEdit li > span.block:nth-of-type(1) {
+    width: 112px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    margin-right: 8px;
+    font-size: 16px;
+}
+#groupEditName {
+    height: 30px;
+    line-height: 30px;
+    width: 224px;
+    border: 1px solid #c1c1c1;
+    padding-left: 12px;
+}
+.modal .groupTableEdit form > ul > li {
+    margin-bottom: 14px;
+}
+.modal .groupTableEdit li > span.block:nth-of-type(2) {
+    width: 96px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    margin-left: 28px;
+    font-size: 16px;
+    margin-right: 6px;
+}
+.modal .groupTableEdit li > .dropdown  {
+    width: 102px;
+    height: 30px;
+    border: 1px solid #c1c1c1;
+    margin-right: 0;
+}
+.modal .groupTableEdit li > .dropdown + .dropdown {
+    margin-left: 10px;
+}
+#newGroupName {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #c1c1c1;
+    width: 150px;
+    margin-right: 10px;
+    padding-left: 12px;
+}
+
+.modal .groupTableEdit li > button   {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    padding: 0 17px;
+    border: none;
+    background-color: #2caae5;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.modal .groupTableEdit > table {
+    margin-top: 10px;
+    border-right: 1px solid #8f8f8f;
+    /*border-bottom: 1px solid #8f8f8f;*/
+    background-color: #fff;
+    table-layout: fixed;
+    margin-bottom: 30px;
+}
+.modal .groupTableEdit > table  tr  td {
+    position: relative;
+    border-left: 1px solid #8f8f8f;
+    border-top: 1px solid #8f8f8f;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.modal .groupTableEdit > table  tr + tr {
+    line-height: 20px;
+}
+.modal .groupTableEdit > table  tr:last-child {
+    border-bottom: 1px solid #8f8f8f;
+}
+.modal .groupTableEdit > table tr {
+      height: 40px;
+      line-height: 40px;
+  }
+.modal .groupTableEdit > table tr  td  .groupEdit {
+    line-height: 40px;
+    color: #f00909;
+}
+.modal .groupTableEdit  .modalFooter button.active {
+    border: 0;
+    color: #fff;
+    background-color: #2caae5;
+}
