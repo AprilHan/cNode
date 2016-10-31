@@ -21,7 +21,6 @@ app.use(express.static('www'));   // www/index.html 访问
 // 挂载路由中间件
 app.use(router)
 
-console.log('23');
 app.listen(9000,'127.0.0.1',function() {
   console.log('server is running at 9000...')
 })

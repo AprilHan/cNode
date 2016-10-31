@@ -13,7 +13,7 @@
       <a href="javascript:;" class="brand pull-left">
         <img src="img/cnodejs_light.svg" alt="">
       </a>
-      <form action="#" class="pull-left">
+      <form action="#" class="pull-left" id='form-search'>
         <input type="text">
       </form>
       <ul  class="nav pull-right">
@@ -25,6 +25,39 @@
     </div>
   </div>
 </div>
+<div class="main">
+    <div class='container'>
+      <div class="row">
+        <div id='content'>
+           <div class='col-md-12 col-sm-12 col-xs-12'style='padding: 0;'>
+            <div class="panel panel-default">
+             <div class="panel-heading">
+               <ul class="nav nav-pills" role="tablist">
+               <li role="presentation" class="active"><a href="#">全部</a></li>
+                <li role="presentation"><a href="#">精华</a></li>
+                <li role="presentation"><a href="#">分享</a></li>
+                <li role="presentation"><a href="#">问答</a></li>
+                <li role="presentation"><a href="#">招聘</a></li>
+              </ul>
+            </div>
+             <div class="panel-body">
+               Panel content
+             </div>
+            </div>
+           </div>
+        </div>
+        <div class="sliderBar pull-right hidden-xs hidden-sm">
+          <div class="panel panel-default">
+            <div class="panel-heading">Panel heading without title</div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+         </div>
+       </div>
+    </div>
+</div>
+
 <h1>my sample project</h1>
 <!-- data-main 加载入口js文件  data-main属性设置后会将js/目录设置为默认的目录-->
 <script data-main='js/index' src="js/require.js"></script>
