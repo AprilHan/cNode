@@ -1,46 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>首页</title>
-  <link rel="stylesheet" href="/www/vender/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="/www/css/reset.css">
-  <link rel="stylesheet" href="/www/css/index.css">
-  <script src="/www/vender/jquery/dist/jquery.js"></script>
-  <script src="/www/vender/bootstrap/dist/js/bootstrap.js"></script>
+    <meta charset="UTF-8">
+    <title>cNode</title>
+    <link rel="stylesheet" href="../js/vender/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style> [v-cloak] { display: none; } </style>
 </head>
-<body>
-<div class=main>
-  <div class="container">
-  <div class="row">
-      <div class="col-md-3">
-        <a href="#" class="thumbnail col-md-12" style='height: 150px;'>
-
-        </a>
-        <h3 class="clearfix"><a href="#" class='fl'>星云纵横</a><span class='fr label-success'>查看</span></h3>
-      </div>
-      <div class="col-md-3">
-         <a href="#" class="thumbnail col-md-12" style='height: 150px;'>
-
-        </a>
-        <h3 class="clearfix"><a href="#" class='fl'>北京之行</a><span class='fr label-success'>查看</span></h3>
-      </div>
-      <div class="col-md-3">
-         <a href="#" class="thumbnail col-md-12" style='height: 150px;'>
-
-        </a>
-        <h3 class="clearfix"><a href="#" class='fl'>北京之行</a><span class='fr label-success'>查看</span></h3>
-      </div>
-      <div class="col-md-3">
-         <a href="#" class="thumbnail col-md-12" style='height: 150px;'>
-
-        </a>
-        <h3 class="clearfix"><a href="#" class='fl'>北京之行</a><span class='fr label-success'>查看</span></h3>
-      </div>
-  </div>
+<body >
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <a href="javascript:;" class="brand pull-left">
+                <img src="../img/cnodejs_light.svg" alt="">
+            </a>
+            <form action="#" class="pull-left" id='form-search'>
+                <input type="text">
+            </form>
+            <ul  class="nav pull-right">
+                <li><a href="javascript">首页</a></li>
+                <li><a href="javascript">首页</a></li>
+                <li><a href="javascript">首页</a></li>
+                <li><a href="javascript">首页</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
+<div class="main" id="app" v-cloak>
+    <div class='container'>
+        <div class="row">
+            <div id='content'>
+                <div class='col-md-12 col-sm-12 col-xs-12'style='padding: 0;'>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <ul class="nav nav-pills" role="tablist">
+                                <!--<li role="presentation" class="active"><a href="#all">全部</a></li>-->
+                                <li role="presentation"><a href="#good">精华</a></li>
+                                <li role="presentation"><a href="#share">分享</a></li>
+                                <li role="presentation"><a href="#ask">问答</a></li>
+                                <li role="presentation"><a href="#job">招聘</a></li>
+                            </ul>
+                        </div>
+                        <div class="panel-body" id="inner-cell">
+                            <div class='cell clearfix' v-for="item in items">
+                                <a href="#" class="user_avatar pull-left"><img src="" alt="" title=''></a>
+                                <span class="pull-left reply_count">
+                                  <span class="count_of_replies">{{item.message}}</span>
+                                  <span class="count_seperator">/</span>
+                                  <span>1013</span>
+                                </span>
+                                <a href="#" class="last-time pull-right">
+                                    <img src="" alt="" class="user-avater-small">
+                                    <span class="last-actvie-time">4小时前</span>
+                                </a>
+                                <div class="title_wrapper">分享我用cnode社区api做微信小应用的入门过程分享我用cnode社区api做微信小应用的入门过程分享我用cnode社区api做微信小应用的入门过程分享我用cnode社区api做微信小应用的入门过程</div>
+                            </div>
+                            <!-- <div class='cell clearfix'>
+                                 <a href="#" class="user_avatar pull-left"><img src="" alt="" title=''></a>
+                                <span class="pull-left reply_count">
+                                  <span class="count_of_replies">11</span>
+                                  <span class="count_seperator">/</span>
+                                  <span>1013</span>
+                                </span>
+                                 <a href="#" class="last-time pull-right">
+                                     <img src="" alt="" class="user-avater-small">
+                                     <span class="last-actvie-time">4小时前</span>
+                                 </a>
+                                 <div class="title_wrapper">分享我用cnode社区api做微信小应用的入门过程分享我用cnode社区api做微信小应用的入门过程分享我用cnode社区api做微信小应用的入门过程分享我用cnode社区api做微信小应用的入门过程</div>
+                             </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sliderBar pull-right hidden-xs hidden-sm">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel heading without title</div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
+<h1>my sample project</h1>
+<!-- data-main 加载入口js文件  data-main属性设置后会将js/目录设置为默认的目录-->
+<script data-main='../js/index' src="../js/require.js"></script>
+<script type='text/javascript'>
+    require.config({
+        paths: {
+            'jquery': ["http://127.0.0.1:9000/js/vender/jquery/dist/jquery"],
+            'bootstrap':['http://127.0.0.1:9000/js/vender/bootstrap/dist/js/bootstrap'],
+            'vue':['http://127.0.0.1:9000/js/vender/vue/dist/vue'],
+            'vueRouter':['http://127.0.0.1:9000/js/vender/vue-router/dist/vue-router']
+        }
+    })
+</script>
 </body>
-<script src='/www/js/index.js'></script>
 </html>

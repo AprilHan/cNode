@@ -1,3 +1,5 @@
 .node_modules/
-/www/dist
+/www/dist/*
 node_modules/*
+.idea/*
+.idea/workspace.xml
