@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cNode</title>
+  <link rel="stylesheet" href="js/vender/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="javascript:;" class="brand pull-left">
+        <img src="img/cnodejs_light.svg" alt="">
+      </a>
+      <form action="#" class="pull-left">
+        <input type="text">
+      </form>
+      <ul  class="nav pull-right">
+        <li><a href="javascript">首页</a></li>
+        <li><a href="javascript">首页</a></li>
+        <li><a href="javascript">首页</a></li>
+        <li><a href="javascript">首页</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<h1>my sample project</h1>
+<!-- data-main 加载入口js文件  data-main属性设置后会将js/目录设置为默认的目录-->
+<script data-main='js/index' src="js/require.js"></script>
+<script type='text/javascript'>
+  require.config({
+    paths: {
+      'jquery': ["http://127.0.0.1:9000/js/vender/jquery/dist/jquery"],
+      'bootstrap':['http://127.0.0.1:9000/js/vender/bootstrap/dist/js/bootstrap']
+    }
+  })
+</script>
+</body>
+</html>
